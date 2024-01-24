@@ -1,0 +1,5 @@
+room_id:1\max_seats:25\[meeting,presentation]\../static/assets/room1.avif
+room_id:2\max_seats:20\[meeting,presentation]\../static/assets/room2.avif
+room_id:3\max_seats:4\[interview,meeting]\../static/assets/room3.avif
+room_id:4\max_seats:10\[interview,meeting,presentation]\../static/assets/room4.avif
+room_id:5\max_seats:4\[interview,meeting]\../static/assets/room5.avif

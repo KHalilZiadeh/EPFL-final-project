@@ -21,3 +21,11 @@ document.querySelectorAll("i").forEach((icon) => {
   });
 });
 /* Checking for the DarkMode */
+
+/* clearing sessionStorage onload */
+window.onload = () => {
+  if (sessionStorage.getItem("room")) {
+    sessionStorage.removeItem("room");
+  }
+};
+/* clearing sessionStorage onload */

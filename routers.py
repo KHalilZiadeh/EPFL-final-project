@@ -71,7 +71,6 @@ def clear():
 
 @app.route("/validate")
 def validate():
-    print((request.args))
     req_data = request.args
 
     queries = []

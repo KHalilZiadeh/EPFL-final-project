@@ -41,7 +41,7 @@ rooms.forEach((room) => {
       .then(() => {
         // if user was in history and clicked on a room the history will update
         // but if he was in the form it will not
-        if (visual.childNodes.length > 0) {
+        if (visual.firstElementChild != null) {
           if (visual.firstElementChild.nodeName.toLocaleLowerCase() != "form") {
             getHistory(id[id.length - 1]);
           }

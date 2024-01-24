@@ -2,10 +2,10 @@
 Interactive room reservation service
 
 - What does it do?  
-  This is a web project which allows the user to reserv a room for a use of choice
+  This is a web project that allows the user to reserve a room for a use of choice.
 
 - What is the "new feature" which you have implemented that we haven't seen before?  
-  Interactive map of the location giving user informations about rooms status
+  Interactive map of the location giving user information about room status.
 
 ## Prerequisites
 Did you add any additional modules that someone needs to install (for instance anything in Python that you `pip install-ed`)? 

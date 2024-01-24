@@ -1,0 +1,60 @@
+:root {
+  --avil-color: #3498db;
+  --m-bg: #ecf0f1;
+  --f-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.map {
+  width: 620px;
+  height: 420px;
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 0.5fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "r1 r1 r2 r2 r2 r3"
+    "r1 r1 . . . . "
+    "r1 r1 r4 r4 r5 .";
+  padding: 10px;
+}
+
+.r1 {
+  grid-area: r1;
+}
+.r2 {
+  grid-area: r2;
+}
+.r3 {
+  grid-area: r3;
+}
+.r4 {
+  grid-area: r4;
+}
+.r5 {
+  grid-area: r5;
+}
+
+.map span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--avil-color);
+  color: var(--f-color);
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.map span:hover {
+  scale: 1.01;
+  opacity: 0.9;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/CSS/map.css" />
+    <link rel="stylesheet" href="../static/CSS/home-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>SpaceShare</title>
+  </head>
+  <body>
+    <i class="fa-solid fa-moon moon"></i>
+    <i class="fa-solid fa-sun sun clicked"></i>
+
+    <header>
+      <h1>SpaceShare</h1>
+      <h2>Where you can share your space</h2>
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><button>Check</button></li>
+        <li><button>Reserve</button></li>
+      </ul>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="search">
+          <p>check before you reserve</p>
+          <ul>
+            <li class="active" id="lidate">Date</li>
+            <li id="liroom">Room</li>
+            <form id="check">
+              <div class="container">
+                <label for="searchoption">use: </label>
+                <select name="searchoption" id="searchoption" required>
+                  <option value="none" selected disabled hidden>
+                    select use
+                  </option>
+                  <option value="interview">interview</option>
+                  <option value="meeting">meeting</option>
+                  <option value="presentation">presentation</option>
+                </select>
+              </div>
+              <div class="container">
+                <label for="dateoption">date: </label>
+                <input type="date" name="dateoption" id="dateoption" required />
+              </div>
+              <div class="container">
+                <label for="searchtime">From: </label>
+                <select name="searchtime" id="searchtime" required>
+                  <option value="8">8:00</option>
+                  <option value="9">9:00</option>
+                  <option value="10">10:00</option>
+                  <option value="11">11:00</option>
+                  <option value="12">12:00</option>
+                  <option value="13">13:00</option>
+                  <option value="14">14:00</option>
+                  <option value="15">15:00</option>
+                  <option value="16">16:00</option>
+                  <option value="17">17:00</option>
+                  <option value="18">18:00</option>
+                  <option value="19">19:00</option>
+                </select>
+                <label for="duration">for:</label>
+                <input
+                  id="duration"
+                  type="number"
+                  pattern="[0-9]"
+                  minlength="1"
+                  maxlength="2"
+                  min="1"
+                  value="1"
+                  required
+                />
+              </div>
+              <input type="submit" value="submit" id="searchsubmit" />
+            </form>
+          </ul>
+        </div>
+        <div class="map">
+          <span class="r1 available" data-id="1">Room 1</span>
+          <span class="r2 available" data-id="2">Room 2</span>
+          <span class="r3 available" data-id="3">Room 3</span>
+          <span class="r4 available" data-id="4">Room 4</span>
+          <span class="r5 available" data-id="5">Room 5</span>
+        </div>
+        <div id="card">
+          <div class="info-container">
+            <div class="info">
+              <h3 id="roomx">need an office</h3>
+              <p id="maxseats">with spaceshare you do</p>
+              <ul id="roomuse"></ul>
+            </div>
+            <img
+              src="../static/assets/room1.avif"
+              alt="room image"
+              id="image"
+            />
+          </div>
+          <div id="buttons">
+            <button id="reserve">reserve</button>
+            <button id="history">history</button>
+            <button id="clear">clear</button>
+          </div>
+          <div id="visual"></div>
+        </div>
+      </div>
+    </main>
+    <script src="../static/JS/DarkModeScript.js"></script>
+    <script src="../static/JS/reveal.js"></script>
+    <script type="module" src="../static/JS/checkForm.js"></script>
+    <script type="module" src="../static/JS/refreshScript.js"></script>
+    <script type="module" src="../static/JS/upadtIU.js"></script>
+    <script type="module" src="../static/JS/roomsEvents.js"></script>
+    <script type="module" src="../static/JS/interActiveForm.js"></script>
+    <script type="module" src="../static/JS/historyClear.js"></script>
+  </body>
+</html>

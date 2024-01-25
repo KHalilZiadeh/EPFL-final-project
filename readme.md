@@ -41,3 +41,6 @@ It is a stand alone project
 - [x] The code follows the code and style conventions as introduced in the course, is fully documented using comments and doesn't contain unused or experimental code. 
   In particular, the code should not use `print()` or `console.log()` for any information the app user should see. Instead, all user feedback needs to be visible in the browser.  
 - [x] All exercises have been completed as per the requirements and pushed to the respective GitHub repository.
+
+## Note
+- The project was developed and tested on mozilla Firefox

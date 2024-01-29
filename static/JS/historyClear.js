@@ -31,7 +31,8 @@ export function getHistory(id) {
         roomData.append(theHist);
 
         // create history elements
-        let resData = res.slice(1, res.length - 1).split(",");
+        let resData = res.slice(1, res.length).split(",");
+        console.log(resData);
         for (let i = 0; i < resData.length; i++) {
           resData[i] = resData[i]
             .slice(
@@ -106,7 +107,6 @@ export function getHistory(id) {
 /* get history */
 
 /* history and clear buttons */
-
 const historyBtn = document.getElementById("history");
 const clearBtn = document.getElementById("clear");
 

@@ -79,8 +79,9 @@ def validate():
         data.append(req_data[query])
         queries.append(query)
     validation = function.validate_data(data)
+    data_len = len(data)
     if validation == True:
-        if len(data) == 7:
+        if data_len == 7:
             return redirect("/submit?room="+data[0]+"&username="+data[1]+"&seats="+data[2]+"&type="+data[3]+"&date="+data[4]+"&start="+data[5]+"&end="+data[6])
         else:
             return redirect("/checkroom?term="+data[0]+"&date="+data[1]+"&start="+data[2]+"&duration="+data[3])

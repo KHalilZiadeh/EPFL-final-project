@@ -63,6 +63,8 @@ def read_room_file():
 
 
 def get_room_data(id):
+    if 1 < len(id):
+        id = id[-1]
     if id != None:
         rooms_data = read_room_file()
         for room_line in rooms_data:

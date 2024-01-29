@@ -273,19 +273,22 @@ reserveBtn.addEventListener("click", () => {
                   }
                 })
                 .then((respo) => {
-                  if (respo == "true") {
+                  console.log(respo);
+                  const TRUE = "true";
+                  if (respo === TRUE) {
                     setTimeout(() => {
                       visual.innerHTML = "";
                       sessionStorage.removeItem("room");
                       shuffleImgs(img);
                     }, 1000);
-                    return "ture";
+                    return TRUE;
                   } else {
                     return respo;
                   }
                 })
                 .then((respo) => {
-                  if (respo != "true") {
+                  console.log(respo);
+                  if (respo == "true") {
                     setTimeout(() => {
                       let theP = (document.createElement("p").innerHTML =
                         "Your reservation was submitted");

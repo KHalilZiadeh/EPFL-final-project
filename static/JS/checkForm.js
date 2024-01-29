@@ -3,6 +3,8 @@ import { createOptions } from "./interActiveForm.js";
 import { formValidation } from "./formValidation.js";
 
 const img = document.getElementById("image");
+const TRUE = "true";
+const FLEX = "flex";
 
 window.onload = shuffleImgs(img);
 
@@ -11,12 +13,45 @@ window.onload = shuffleImgs(img);
 export function createFirstOption(str) {
   let firstOption = document.createElement("option");
   firstOption.innerHTML = str;
-  firstOption.selected = "true";
-  firstOption.disabled = "true";
-  firstOption.hidden = "true";
+  firstOption.selected = TRUE;
+  firstOption.disabled = TRUE;
+  firstOption.hidden = TRUE;
   firstOption.value = "none";
 
   return firstOption;
+}
+
+function checkTab(e, tabId) {
+  if (e.target.id == tabId) {
+    document.querySelector("#check .container label").innerHTML = "room: ";
+    let selOpt = document.querySelector("#check .container #searchoption");
+    let firstOption = createFirstOption("select room");
+
+    document
+      .querySelectorAll("#check .container #searchoption option")
+      .forEach((option) => {
+        option.remove();
+      });
+
+    createOptions("searchoption");
+    selOpt.prepend(firstOption);
+  } else {
+    let div = document.querySelector("#check .container");
+    div.style.display = FLEX;
+    div.lastElementChild.firstElementChild.selected = TRUE;
+
+    document.querySelector("#check .container label").innerHTML = "use: ";
+    let selOpt = document.querySelector("#check .container #searchoption");
+    let firstOption = createFirstOption("select use");
+
+    document
+      .querySelectorAll("#check .container #searchoption option")
+      .forEach((option) => {
+        option.remove();
+      });
+    createOptions("searchoption");
+    selOpt.prepend(firstOption);
+  }
 }
 
 const tabs = document.querySelectorAll(".search ul li");
@@ -27,36 +62,8 @@ tabs.forEach((tab) => {
         tab.classList.toggle("active");
       });
     }
-    if (e.target.id == "liroom") {
-      document.querySelector("#check .container label").innerHTML = "room: ";
-      let selOpt = document.querySelector("#check .container #searchoption");
-      let firstOption = createFirstOption("select room");
-
-      document
-        .querySelectorAll("#check .container #searchoption option")
-        .forEach((option) => {
-          option.remove();
-        });
-
-      createOptions("searchoption");
-      selOpt.prepend(firstOption);
-    } else {
-      let div = document.querySelector("#check .container");
-      div.style.display = "flex";
-      div.lastElementChild.firstElementChild.selected = "ture";
-
-      document.querySelector("#check .container label").innerHTML = "use: ";
-      let selOpt = document.querySelector("#check .container #searchoption");
-      let firstOption = createFirstOption("select use");
-
-      document
-        .querySelectorAll("#check .container #searchoption option")
-        .forEach((option) => {
-          option.remove();
-        });
-      createOptions("searchoption");
-      selOpt.prepend(firstOption);
-    }
+    const tabId = "liroom";
+    checkTab(e, tabId);
   });
 });
 
@@ -99,7 +106,7 @@ submitSearch.addEventListener("click", (e) => {
           colors.push(color);
         });
         colors.forEach((clr, indx) => {
-          clr == "True"
+          clr == TRUE
             ? (document.querySelector(
                 `span[data-id="${(indx + 1).toString()}"]`
               ).style.backgroundColor = "#27ae60")
@@ -111,7 +118,7 @@ submitSearch.addEventListener("click", (e) => {
                 `span[data-id="${indx + 1}"]`
               ).style.backgroundColor = "#3498db");
         });
-        document.getElementById("explain").style.display = "flex";
+        document.getElementById("explain").style.display = FLEX;
       })
       .then(() => {
         setTimeout(() => {

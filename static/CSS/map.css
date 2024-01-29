@@ -62,7 +62,8 @@
 #explain {
   grid-area: xp;
   position: relative;
-  display: none;
+  display: flex;
+  visibility: hidden;
   align-items: center;
   justify-content: space-evenly;
   color: #2f2f2f;
@@ -78,8 +79,8 @@
 }
 
 #explain span {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 }
 

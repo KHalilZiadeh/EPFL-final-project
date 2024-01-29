@@ -37,6 +37,13 @@ function createUserInput() {
 }
 
 function createQuery() {
+  let roomId = sessionStorage.getItem("room");
+  let userName = document.getElementById("username").value;
+  let seats = document.getElementById("seats").value;
+  let useValue = document.getElementById("use").value;
+  let date = document.getElementById("date").value;
+  let start = document.getElementById("start").value;
+  let end = document.getElementById("end").value;
   let inArr = [roomId, userName, seats, useValue, date, start, end];
   let urlAr = [
     "room=",
@@ -132,7 +139,7 @@ reserveBtn.addEventListener("click", () => {
               start &&
               end
             ) {
-              submitUrl = createQuery();
+              const submitUrl = createQuery();
 
               fetch(submitUrl)
                 .then((res) => {
@@ -169,14 +176,14 @@ reserveBtn.addEventListener("click", () => {
                       }, 1000);
                     }, 1000);
                   } else {
-                    checkMessage(respo);
+                    functions.checkMessage(respo);
                     setTimeout(() => {
                       functions.removeMessage();
                     }, 1000);
                   }
                 });
             } else {
-              checkMessage("Please fill your name first");
+              functions.checkMessage("Please fill your name first");
             }
           }
         });
@@ -189,7 +196,7 @@ reserveBtn.addEventListener("click", () => {
       }
     });
   } else {
-    checkMessage("Please select a room first");
+    functions.checkMessage("Please select a room first");
   }
 });
 

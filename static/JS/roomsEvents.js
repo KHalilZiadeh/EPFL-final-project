@@ -15,7 +15,7 @@ rooms.forEach((room) => {
     let status = document.getElementById("explain").style.display;
     const flexStatus = "flex";
     if (status == flexStatus) {
-      document.getElementById("explain").style.display = "none";
+      document.getElementById("explain").style.visibility = "hidden";
     }
 
     const roomUrl = "/getroomdata?id=";

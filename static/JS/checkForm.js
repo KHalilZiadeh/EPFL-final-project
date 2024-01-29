@@ -4,7 +4,7 @@ import { formValidation } from "./formValidation.js";
 
 const img = document.getElementById("image");
 const TRUE = "true";
-const FLEX = "flex";
+const VISIBLE = "visible";
 
 window.onload = shuffleImgs(img);
 
@@ -37,7 +37,7 @@ function checkTab(e, tabId) {
     selOpt.prepend(firstOption);
   } else {
     let div = document.querySelector("#check .container");
-    div.style.display = FLEX;
+    div.style.visibility = VISIBLE;
     div.lastElementChild.firstElementChild.selected = TRUE;
 
     document.querySelector("#check .container label").innerHTML = "use: ";
@@ -83,7 +83,9 @@ submitSearch.addEventListener("click", (e) => {
 
     const searchOption = document.getElementById("searchoption").value;
     const dateOption = document.getElementById("dateoption").value;
-    const duration = document.getElementById("duration").value;
+    const duration = Math.ceil(
+      parseFloat(document.getElementById("duration").value)
+    ).toString();
 
     let queries = `?term=${searchOption}&date=${dateOption}&start=${searchTime.value}&duration=${duration}`;
 
@@ -106,7 +108,7 @@ submitSearch.addEventListener("click", (e) => {
           colors.push(color);
         });
         colors.forEach((clr, indx) => {
-          clr == TRUE
+          clr.toLowerCase() == TRUE
             ? (document.querySelector(
                 `span[data-id="${(indx + 1).toString()}"]`
               ).style.backgroundColor = "#27ae60")
@@ -118,7 +120,7 @@ submitSearch.addEventListener("click", (e) => {
                 `span[data-id="${indx + 1}"]`
               ).style.backgroundColor = "#3498db");
         });
-        document.getElementById("explain").style.display = FLEX;
+        document.getElementById("explain").style.visibility = VISIBLE;
       })
       .then(() => {
         setTimeout(() => {

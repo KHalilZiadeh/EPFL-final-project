@@ -34,6 +34,8 @@ export function createDate(form) {
   const month = (times.getMonth() + 1).toString().padStart(2, "0");
   const day = times.getDate().toString().padStart(2, "0");
 
+  reservDate.min = `${year}-${month}-${day}`;
+
   reservDate.value = `${year}-${month}-${day}`;
   form.append(reservDate);
 }

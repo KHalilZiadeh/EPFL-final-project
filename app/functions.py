@@ -94,7 +94,7 @@ def validate_data(data):
     if len(data) == 7:
         if not (0 < int((data[0])) and int((data[0])) < 5):
             return "Please enter valid room"
-        pattern = r'^[a-zA-Z\s.]+$'
+        pattern = r'^[a-zA-Z\s\'.]+$'
         if not re.match(pattern, data[1]):
             return "Please enter valid name"
         if int(data[2]) <= 0 or int(data[2]) > int(get_room_data((data[0])).split("\\")[0][-1]):

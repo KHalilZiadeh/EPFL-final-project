@@ -12,9 +12,9 @@ const roomUse = document.getElementById("roomuse");
 rooms.forEach((room) => {
   room.addEventListener("click", function (e) {
     rooms.forEach((room) => (room.style.backgroundColor = "#3498db"));
-    let status = document.getElementById("explain").style.display;
-    const flexStatus = "flex";
-    if (status == flexStatus) {
+    let status = document.getElementById("explain").style.visibility;
+    const VISIBLE = "visible";
+    if (status == VISIBLE) {
       document.getElementById("explain").style.visibility = "hidden";
     }
 

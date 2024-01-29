@@ -76,18 +76,23 @@
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
+  width: fit-content;
 }
 
-#explain span {
+#explain div {
   width: 15px;
   height: 15px;
   border-radius: 50%;
 }
 
-#explain span.green {
+#explain div.blue {
+  background-color: var(--avil-color);
+}
+
+#explain div.green {
   background-color: #27ae60;
 }
 
-#explain span.red {
+#explain div.red {
   background-color: #e74c3c;
 }

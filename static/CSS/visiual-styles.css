@@ -1,7 +1,7 @@
 #visual {
   height: 214px;
   background-color: #ffffff;
-  overflow-y: scroll;
+  overflow-y: overlay;
   border-radius: 0.5rem;
   padding: 2px;
   color: black;
@@ -31,19 +31,19 @@
 
 #visual ul li span {
   position: absolute;
+  top: 50%;
   translate: 0 -50%;
+  font-size: 13px;
 }
 
 #visual ul li span:nth-child(1) {
   width: 20px;
   left: 5px;
-  top: 50%;
 }
 
 #visual ul li span:nth-child(2) {
   width: 80px;
   left: 40px;
-  top: 50%;
   text-align: left;
   white-space: nowrap;
   overflow-x: hidden;
@@ -53,11 +53,9 @@
 #visual ul li span:nth-child(3) {
   width: 50px;
   right: 85px;
-  top: 50%;
 }
 
 #visual ul li span:nth-child(4) {
   width: 50px;
   right: 10px;
-  top: 50%;
 }

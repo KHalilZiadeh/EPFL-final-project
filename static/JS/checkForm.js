@@ -1,5 +1,5 @@
 import { shuffleImgs } from "./imgShuffler.js";
-import { createOptions } from "./interActiveForm.js";
+import { createOptions } from "./createFunctions.js";
 import { formValidation } from "./formValidation.js";
 
 const img = document.getElementById("image");

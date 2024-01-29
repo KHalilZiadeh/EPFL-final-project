@@ -1,6 +1,6 @@
 import { updateUI } from "./upadtIU.js";
 import { stopImgs } from "./imgShuffler.js";
-import { createOptions } from "./interActiveForm.js";
+import { createOptions } from "./createFunctions.js";
 import { getHistory } from "./historyClear.js";
 
 const rooms = document.querySelectorAll(".map span");

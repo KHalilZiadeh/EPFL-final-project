@@ -1,5 +1,5 @@
-import { removeMessage } from "./interActiveForm.js";
-import { checkMessage } from "./interActiveForm.js";
+import { removeMessage } from "./createFunctions.js";
+import { checkMessage } from "./createFunctions.js";
 
 const roomData = document.getElementById("card");
 

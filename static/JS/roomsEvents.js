@@ -12,6 +12,12 @@ const roomUse = document.getElementById("roomuse");
 rooms.forEach((room) => {
   room.addEventListener("click", function (e) {
     rooms.forEach((room) => (room.style.backgroundColor = "#3498db"));
+    let status = document.getElementById("explain").style.display;
+    const flexStatus = "flex";
+    if (status == flexStatus) {
+      document.getElementById("explain").style.display = "none";
+    }
+
     const roomUrl = "/getroomdata?id=";
     let id = e.target.innerHTML;
 

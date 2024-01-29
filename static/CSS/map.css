@@ -20,7 +20,7 @@
   gap: 10px;
   grid-template-areas:
     "r1 r1 r2 r2 r2 r3"
-    "r1 r1 . . . . "
+    "r1 r1 xp xp xp xp "
     "r1 r1 r4 r4 r5 .";
   padding: 10px;
 }
@@ -57,4 +57,36 @@
   scale: 1.01;
   opacity: 0.9;
   font-size: 1.2rem;
+}
+
+#explain {
+  grid-area: xp;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  color: black;
+  font-size: 13px;
+}
+
+#explain .color-indi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+#explain span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#explain span.green {
+  background-color: #27ae60;
+}
+
+#explain span.red {
+  background-color: #e74c3c;
 }

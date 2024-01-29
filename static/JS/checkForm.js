@@ -111,6 +111,7 @@ submitSearch.addEventListener("click", (e) => {
                 `span[data-id="${indx + 1}"]`
               ).style.backgroundColor = "#3498db");
         });
+        document.getElementById("explain").style.display = "flex";
       })
       .then(() => {
         setTimeout(() => {

@@ -65,7 +65,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: scroll;
+    overflow: overlay;
   }
   @media (max-width: 1130px) {
     .wrapper .map {

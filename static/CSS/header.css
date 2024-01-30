@@ -1,5 +1,8 @@
 header {
-  height: 15%;
+  width: 100vw;
+  text-align: center;
+  height: 15vh;
+  max-height: 200px;
   padding-top: 10px;
   background-color: var(--cl-white);
   color: var(--cl-blue);
@@ -10,15 +13,23 @@ header.dark {
   background-color: var(--cl-blue);
   color: var(--cl-white);
 }
-header {
-  width: 100%;
-  text-align: center;
-}
+
 h1 {
   margin: 0;
 }
 h2 {
   margin-top: 5px;
+}
+@media (max-width: 1130px) {
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  h2 {
+    display: none;
+  }
 }
 
 /* i styles */
@@ -50,7 +61,7 @@ i.clicked {
   display: none;
 }
 
-@media (min-width: 950px) and (max-width: 1130px) {
+@media (max-width: 1130px) {
   .burger {
     position: absolute;
     height: 16px;

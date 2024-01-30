@@ -11,7 +11,7 @@
   text-align: center;
   position: relative;
 }
-@media (min-width: 950px) and (max-width: 1130px) {
+@media (max-width: 1130px) {
   #card {
     display: none;
   }
@@ -60,7 +60,7 @@ button {
   cursor: pointer;
 }
 
-@media (min-width: 950px) and (max-width: 1130px) {
+@media (max-width: 650px) {
   button {
     margin-right: 0;
     margin-left: 0;

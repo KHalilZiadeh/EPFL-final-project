@@ -1,7 +1,7 @@
 .search {
   display: block;
 }
-@media (min-width: 950px) and (max-width: 1130px) {
+@media (max-width: 1130px) {
   .search {
     display: none;
   }

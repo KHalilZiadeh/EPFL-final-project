@@ -92,12 +92,12 @@ def check_date(date):
 def validate_data(data):
     room_use = ["interview", "meeting", "presentation"]
     if len(data) == 7:
-        if not (0 < int((data[0])) and int((data[0])) < 5):
+        if not (0 < int((data[0])) and int((data[0])) <= 5):
             return "Please enter valid room"
         pattern = r'^[a-zA-Z\s\'.]+$'
         if not re.match(pattern, data[1]):
             return "Please enter valid name"
-        if int(data[2]) <= 0 or int(data[2]) > int(get_room_data((data[0])).split("\\")[0][-1]):
+        if int(data[2]) <= 0 or int((get_room_data((data[0])).split("\\")[1]).split(":")[1]) < int(data[2]):
             return "Please enter valid seats number"
         if data[3] not in get_room_data((data[0])).split("\\")[2]:
             return "Please enter valid use"

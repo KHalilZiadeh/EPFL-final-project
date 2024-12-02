@@ -1,4 +1,4 @@
-# MY FINAL PROJECT
+# Room's mangment system
 Interactive room reservation service
 
 - What does it do?  
